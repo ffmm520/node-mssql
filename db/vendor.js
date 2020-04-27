@@ -1,10 +1,10 @@
 const mssql = require('mssql')
-const dbConfig = {
-  server: '192.168.2.20',
+const config = {
+  server: '192.168.0.1',
   port: 1433,
-  user: 'SA',
-  password: 'FFMM520mm',
-  database: 'flow',
+  user: 'hydee',
+  password: 'hydee',
+  database: 'hdwebquery',
   options: {
     appName: 'baboon',
     encrypt: false
@@ -18,14 +18,18 @@ const dbConfig = {
     idelTimeoutMills: 2000 
   }
 }
-mssql.connect(dbConfig).then(pool => {
+/* mssql.connect(dbConfig).then(pool => {
   if (pool.connecting) {
     console.log('Connecting to database')
   } 
   if (pool.connected) {
-    console.log('yes')
+    console.log('yes server1')
   }
   return pool;
 }).catch( err => {
   console.log('failed')
-})
+}) */
+
+module.exports ={
+  config
+}

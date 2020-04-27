@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="//192.168.0.65:3000/static/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>请升级您的浏览器</title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .clearfix:after{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+      ul,
+      ol {
+        list-style: none;
+      }
+      .clearfix {
+        *+height: 1%;
+      }
+      .box {
+        width: 566px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 80px 0;
+        margin: 60px auto 0 auto;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      }
+      .box-wrapper {
+        padding: 0 73px;
+      }
+      .box h1 {
+        color: #353535;
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .box p {
+        color: #888;
+        margin-top: 38px;
+        text-align: center;
+        text-align: left;
+      }
+      .box ul {
+        margin-top: 38px;
+      }
+      .box ul li {
+        float: left;
+        width: 200px;
+        height: 75px;
+        margin-bottom: 18px;
+        border: #d9d9d9 solid 1px;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 75px;
+        overflow: hidden;
+        transition: all 0.5s ease;
+      }
+      .box ul li:hover {
+        border-color: #888;
+      }
+      .box ul li a {
+        display: block;
+        overflow: hidden;
+        text-indent: -1000px;
+      }
+      .box ul li.ie {
+        margin-left: 12px;
+      }
+      .box ul li.firefox {
+        margin-bottom: 0;
+      }
+      .chrome a {
+        background-image: url("//192.168.0.65:3000/static/chrome.png");
+        background-repeat: no-repeat;
+        background-position: 41px 18px;
+        background-size: 134px 44px;
+      }
+      .ie a {
+        background-image: url("//192.168.0.65:3000/static/ie.png");
+        background-repeat: no-repeat;
+        background-position: 29px 9px;
+        background-size: 123px 55px;
+      }
+      .firefox a {
+        background-image: url("//192.168.0.65:3000/static/firefox.png");
+        background-repeat: no-repeat;
+        background-position: 42px 20px;
+        background-size: 99px 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box-wrapper">
+        <h1>请升级您的浏览器</h1>
+        <p>
+          尊敬的用户，您现在使用的 Internet Explorer 浏览器版本过低，建议您升级至 Internet Explorer 11 版本或使用其他浏览器（如：Google Chrome 或 Mozilla Firefox），以便您能继续访问
+        <ul class="clearfix">
+          <li class="chrome">
+            <a target="_blank" href="https://www.google.com/intl/zh-CN/chrome/" title="点击跳转到Chrome浏览器官方网站">chrome</a>
+          </li>
+          <li class="ie">
+            <a target="_blank" href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads" title="点击跳转到IE浏览器官方网站">Internet Explorer</a>
+          </li>
+          <li class="firefox">
+            <a target="_blank" href="https://www.mozilla.org/zh-CN/firefox/new/" title="点击跳转到Firefox浏览器官方网站">Firefox</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

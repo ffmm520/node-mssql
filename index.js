@@ -1,14 +1,20 @@
-const express = require('express')
-const app = express()
-require('./db/connect')
-const {find} = require('./service/findEmp')
+const Koa = require('koa')
+const bodyParser = require('koa-bodyparser')
+const cors = require('cors')
+require('dotenv').config()
 
-// app.use(express.json())
-app.get('/emp', async (req, res) => {
-  const emps = await find()
-  res.send(emps)
-})
+const app = new Koa()
+
+const { gloableError, notFound } = require('./utils/errHandle')
+
+app.use(gloableError)
+app.use(cors())
+app.use(bodyParser())
+app.use('/api', require('./routes/flow'))
+app.use('/api', require('./routes/login'))
+app.use('/static', express.static(__dirname + '/public'))
+app.use(notFound)
 
 app.listen(3000, () => {
-  console.log('start at port 3000');
+    console.log('start at port 3000');
 })
